@@ -1,5 +1,6 @@
 <div align='center'>
-    <h1>OculiScraper <p>(plural for Oculus)</p></h1>
+    <h1>OculiScraper</h1>
+    <small>(plural for Oculus)</small>
 </div>
 
 
