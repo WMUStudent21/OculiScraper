@@ -1,8 +1,18 @@
-from time import sleep
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+
+def extract(uri):
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.maximize_window() # For maximizing window
+    driver.implicitly_wait(40) # gives an implicit wait for 20 seconds
+    driver.get(uri)
+
+    desc = driver.find_element(by=By.XPATH, value='//div[@class="clamped-description__content"]').text
+
+    driver.quit()
+    return desc
 
 options = Options()
 options.headless = True
@@ -11,23 +21,21 @@ url = 'https://www.oculus.com/experiences/quest/section/1888816384764129'
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window() # For maximizing window
-driver.implicitly_wait(50) # gives an implicit wait for 20 seconds
+driver.implicitly_wait(30) # gives an implicit wait for 20 seconds
 driver.get(url)
 
-game_search = 'Wings 1941'
-join_url = 'https://www.oculus.com'
+game_search = ['Wings 1941','The Last Clockwinder']
+data = {}
 
-# all_names = driver.find_elements(by=By.XPATH, value='//div[@class="store-section-item__meta-name"]')
-# all_names = driver.find_elements(by=By.XPATH, value="//div[contains(text(), '" + game_search + "')]")
-
-# for elem in all_names:
-# submit = driver.find_element(by=By.XPATH, value="//div[contains(text(), '" + game_search + "')]/ancestor::a[@class='store-section-item-tile']")
-submit = driver.find_element(by=By.XPATH, value="//a[@class='store-section-item-tile']/following-sibling::div[contains(text(), '" + game_search + "')]")
-    # sleep(1)
-print(submit.get_attribute("href"))
-
-       
+for title in game_search:    
+    link = driver.find_element(by=By.XPATH, value="//div[@class='store-section-item__meta-name' and contains(text(), '" + title + "')]/ancestor::div[@class='store-section-item']/a[@class='store-section-item-tile']").get_attribute("href")
+    desc = extract(link)
+    curr = {
+        title : desc
+    }
+    data.update(curr)
 
 
+print(data)
 
 driver.quit()
