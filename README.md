@@ -1,6 +1,9 @@
 <div align='center'>
-    <h1>OculiScraper</h1></nobr><p>(plural for Oculus)</p>
+    <h1># OculiScraper<small>(plural for Oculus)</small></h1>
 </div>
+
+
+
 
 Headless Web Scraper on Oculus titles and descriptions,
 utilising Selenium and XPath
