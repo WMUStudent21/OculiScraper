@@ -13,10 +13,8 @@
 
 <h2 align='center'>Issues faced</h2>
 
-------------
 * Website contains events and flex
 
 <h2 align='center'>Resolution</h2>
 
-------------
 * Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
