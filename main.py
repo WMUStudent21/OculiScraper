@@ -27,17 +27,22 @@ driver.get(url)
 with open('whitelist_oculus.txt') as f:
     game_search = f.read().splitlines() 
 f.close()
+
 data = {}
 
+# with open('output.txt', 'w') as f:
 for title in game_search:    
     link = driver.find_element(by=By.XPATH, value="//div[@class='store-section-item__meta-name' and contains(text(), '" + title + "')]/ancestor::div[@class='store-section-item']/a[@class='store-section-item-tile']").get_attribute("href")
     desc = extract(link)
-    curr = {
-        title : desc
-    }
+    curr = {    title : desc    }
     data.update(curr)
+    # print(curr, file=f)
 
+f = open("output.txt", "w")
+f.write("{\n")
+for k in data.keys():
+    f.write("'{}'\n===========================\n'{}'\n\n".format(k, data[k]))
+f.write("}")
 
-print(data)
-
+f.close()
 driver.quit()
