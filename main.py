@@ -24,7 +24,9 @@ driver.maximize_window() # For maximizing window
 driver.implicitly_wait(30) # gives an implicit wait for 20 seconds
 driver.get(url)
 
-game_search = ['Wings 1941','The Last Clockwinder']
+with open('whitelist_oculus.txt') as f:
+    game_search = f.read().splitlines() 
+f.close()
 data = {}
 
 for title in game_search:    
