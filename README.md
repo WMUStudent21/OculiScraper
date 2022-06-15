@@ -11,6 +11,7 @@ utilising Selenium and XPath
 --------------------------------
 
 <h3 align='center'>GOALS</h3>
+
 * Fetch all necessary URIs from main catalog according to whitelist
 * Extract description from game page
 * Output to whatever file format I want
