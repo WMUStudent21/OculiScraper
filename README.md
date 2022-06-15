@@ -3,18 +3,20 @@
     <small>(plural for Oculus)</small>
 </div>
 
-<h3 align='center'>Headless Web Scraper on Oculus titles and descriptions</h3>
+<h2 align='center'>Headless Web Scraper on Oculus titles and descriptions</h2>
 
-<h3 align='center'>GOALS</h3>
+<h2 align='center'>GOALS</h2>
 
    * Fetch all necessary URIs from main catalog according to whitelist  
    * Extract description from game page
    * Output to whatever file format I want
 
-<div align='center'>Issues faced</div>
+<h2 align='center'>Issues faced</h2>
+
 ------------
 * Website contains events and flex
 
-<div align='center'>Resolution</div>
+<h2 align='center'>Resolution</h2>
+
 ------------
 * Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
