@@ -12,5 +12,6 @@ utilising Selenium and XPath
 
 <div align='center'>
     <h3>GOALS</h3>
-    1. Extract description from
+    - Fetch all necessary URIs from main catalog
+    - Extract description from game page
 </div>
