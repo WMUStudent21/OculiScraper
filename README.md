@@ -1,5 +1,5 @@
 <div align='center'>
-    <h1>OculiScraper</h1>
+    <title>OculiScraper</title>
     <small>(plural for Oculus)</small>
     <h2>Headless Web Scraper on Oculus titles and descriptions</h2>
     <h3>GOALS</h3>
