@@ -1,11 +1,3 @@
-<style>
-    ul {
-    display: inline-block;
-    padding-left: 0;
-    text-align: left;
-    }
-</style>
-
 <div align='center'>
     <h1>OculiScraper</h1>
     <small>(plural for Oculus)</small>
@@ -15,19 +7,11 @@
       <li>Fetch all necessary URIs from main catalog according to whitelist  </li>
       <li>Extract description from game page</li>
       <li>Output to whatever file format I want</li>
-    </ul> 
+    </ul>
+    <h2>Issues faced</h2>
+    Website contains events and flex
+    <h2>Resolution</h2>
+    Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
 </div>
 
 
-
-<div align='center'>
-
-</div>
-
-<h2 align='center'>Issues faced</h2>
-
-* Website contains events and flex
-
-<h2 align='center'>Resolution</h2>
-
-* Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
