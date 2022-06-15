@@ -8,9 +8,9 @@
       <li>Extract description from game page</li>
       <li>Output to whatever file format I want</li>
     </ul>
-    <h2>Issues faced</h2>
+    <h3>Issues faced</h3>
     Website contains events and flex
-    <h2>Resolution</h2>
+    <h3>Resolution</h3>
     Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
 </div>
 
