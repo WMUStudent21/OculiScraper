@@ -12,6 +12,8 @@
     Website contains events and flex
     <h3>Resolution</h3>
     Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
+    <h3>Usage</h3>
+    Replace titles in whitelist with yours and run script, can also be referenced for other types of scraping.
 </div>
 
 
