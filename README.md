@@ -5,11 +5,14 @@
 
 <h2 align='center'>Headless Web Scraper on Oculus titles and descriptions</h2>
 
-<h2 align='center'>GOALS</h2>
-
-   * Fetch all necessary URIs from main catalog according to whitelist  
-   * Extract description from game page
-   * Output to whatever file format I want
+<body align='center'>
+    <h2>GOALS</h2>
+    <ul>
+      <li>Fetch all necessary URIs from main catalog according to whitelist  </li>
+      <li>Extract description from game page</li>
+      <li>Output to whatever file format I want</li>
+    </ul> 
+</body>
 
 <h2 align='center'>Issues faced</h2>
 
