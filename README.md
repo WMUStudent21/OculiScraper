@@ -1,6 +1,6 @@
 <div align='center'>
     <h1># OculiScraper</h1>
-    <h2>(plural for Oculus)</h2>
+    <p>(plural for Oculus)</p>
 </div>
 
 Headless Web Scraper on Oculus titles and descriptions,
