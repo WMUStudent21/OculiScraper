@@ -1,3 +1,5 @@
+# Purely desc. extractor, for public reference
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -19,5 +21,4 @@ data = {
 }
 
 print(data)
-# print(driver.page_source)
 driver.quit()
