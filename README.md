@@ -1,8 +1,10 @@
-ul {
+<style>
+    ul {
     display: inline-block;
     padding-left: 0;
     text-align: left;
-}
+    }
+</style>
 
 <div align='center'>
     <h1>OculiScraper</h1>
