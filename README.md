@@ -11,6 +11,14 @@ utilising Selenium and XPath
 --------------------------------
 
 <h3 align='center'>GOALS</h3>
-- Fetch all necessary URIs from main catalog
-- Extract description from game page
+* Fetch all necessary URIs from main catalog according to whitelist
+* Extract description from game page
+* Output to whatever file format I want
 
+Issues faced
+------------
+* Website contains events and flex
+
+Resolution
+------------
+* Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
