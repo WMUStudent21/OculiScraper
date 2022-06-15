@@ -11,10 +11,10 @@
    * Extract description from game page
    * Output to whatever file format I want
 
-Issues faced
+<div align='center'>Issues faced</div>
 ------------
 * Website contains events and flex
 
-Resolution
+<div align='center'>Resolution</div>
 ------------
 * Used Selenium and XPath as a workaround, even though BeautifulSoup might've been an elegant solution.
