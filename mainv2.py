@@ -1,3 +1,5 @@
+# scalable/easy editing
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -41,19 +43,24 @@ with open('whitelist_oculus.txt') as f:
     game_search = f.read().splitlines() 
 f.close()
 
-# Writes to output.txt in a single pass
-with open("output.txt", "w") as f:
-    f.write("{\n\n")
-    for title in game_search:
-        # Validates title typo/missing on user-end via notified output
-        try:   
-            # Fetches the 'href' URI of a game title
-            link = driver.find_element(by=By.XPATH, value="//div[@class='store-section-item__meta-name' and contains(text(), '" + title + "')]/ancestor::div[@class='store-section-item']/a[@class='store-section-item-tile']").get_attribute("href")
-            desc = extract(link)
-        except:
-            desc = 'No description'
-        f.write("'{}'\n===========================\n'{}'\n\n".format(title, desc))
-    f.write("}")
+data = {} # database of title:desc
+for title in game_search:
+    # Validates title typo/missing on user-end via notified output
+    try:   
+        # Fetches the 'href' URI of a game title
+        link = driver.find_element(by=By.XPATH, value="//div[@class='store-section-item__meta-name' and contains(text(), '" + title + "')]/ancestor::div[@class='store-section-item']/a[@class='store-section-item-tile']").get_attribute("href")
+        desc = extract(link)
+    except:
+        desc = 'No description'
+    curr = {    title : desc    }
+    data.update(curr)
+
+# Writes to output file
+f = open("output.txt", "w")
+f.write("{\n\n")
+for k in data.keys():
+    f.write("'{}'\n===========================\n'{}'\n\n".format(k, data[k]))
+f.write("}")
 
 f.close()
 driver.quit()
