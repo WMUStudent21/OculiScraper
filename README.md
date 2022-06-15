@@ -3,12 +3,8 @@
     <small>(plural for Oculus)</small>
 </div>
 
-
-
-
-Headless Web Scraper on Oculus titles and descriptions,
-utilising Selenium and XPath
---------------------------------
+<p>Headless Web Scraper on Oculus titles and descriptions,
+utilising Selenium and XPath</p>
 
 <h3 align='center'>GOALS</h3>
 
