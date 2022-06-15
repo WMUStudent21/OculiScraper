@@ -1,3 +1,9 @@
+ul {
+    display: inline-block;
+    padding-left: 0;
+    text-align: left;
+}
+
 <div align='center'>
     <h1>OculiScraper</h1>
     <small>(plural for Oculus)</small>
